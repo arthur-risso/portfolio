@@ -1,6 +1,6 @@
 # Meu portfólio!
 
-Este repositório contém meu repositório desenvolvido utilizando React e TypeScript. Neste arquivo README, você encontrará um guia passo a passo para abrir o projeto em seu ambiente local.
+Este repositório contém meu repositório desenvolvido utilizando React, TypeScript e Tailwind CSS para a estilização. Neste arquivo README, você encontrará um guia passo a passo para abrir o projeto em seu ambiente local.
 
 ## Pré-requisitos
 
