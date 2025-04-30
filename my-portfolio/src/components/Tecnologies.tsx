@@ -3,7 +3,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 const Tecnologies = () => {
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-10">
             <p className="font-bold text-black">Tecnologies</p>
             <div className="line w-[2px] h-5 bg-black rounded-lg"></div>
             <FaHtml5 size={40} fill="#1e1a1a"/>

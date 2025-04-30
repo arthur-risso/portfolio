@@ -25,11 +25,11 @@ const Home = () => {
           </div>
         </div>
         <Tecnologies />
-        <div id="scroll-down" className="flex items-center gap-4">
+        <a href="#" id="scroll-down" className="flex items-center gap-4 transition delay-150 duration-300 ease-in-out hover:translate-y-3 cursor-default">
           <BsFillMouseFill size={32} fill="#333533"/>
           <p className="text-gray">Scroll down</p>
           <FaArrowDown size={16} fill="#333533"/>
-        </div>
+        </a>
       </aside>
       <img
         src="../src/assets/images/home-img.jpg"
