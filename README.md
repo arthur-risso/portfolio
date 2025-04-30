@@ -24,7 +24,7 @@ Isso criará uma cópia local do repositório em seu ambiente.
 Navegue até o diretório raiz do projeto e execute o seguinte comando para instalar as dependências do Node.js:
 
 ```bash
-cd portfolio
+cd my-portfolio
 npm install
 ```
 
@@ -35,7 +35,7 @@ Esse comando irá ler o arquivo `package.json` e instalar todas as dependências
 Para iniciar o servidor Node.js, execute o seguinte comando:
 
 ```bash
-npm start
+npm run dev
 ```
 
 Isso iniciará o servidor e você poderá acessá-lo através do seu navegador no endereço `http://localhost:3000`.
