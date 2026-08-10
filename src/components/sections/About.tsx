@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Container } from '@/components/layout/Container';
 import { AboutPhoto } from '@/components/about/AboutPhoto';
 import { motion, type Variants } from 'motion/react';
+import { AboutModal } from '@/components/about/AboutModal';
 
 const container: Variants = {
   hidden: {},
@@ -12,14 +14,9 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const STATS = [
-  { value: '3+', label: 'anos de experiência' },
-  { value: '15+', label: 'projetos entregues' },
-  { value: '8', label: 'tecnologias no dia a dia' },
-  { value: '100%', label: 'componentes acessíveis' },
-];
-
 export function About() {
+  const [isPhotoOpen, setIsPhotoOpen] = useState(false);
+
   return (
     <section id="sobre" className="py-24">
       <Container>
@@ -58,25 +55,11 @@ export function About() {
           </motion.div>
 
           <div className="md:mt-10 md:justify-self-end">
-            <AboutPhoto />
+            <AboutPhoto onOpen={() => setIsPhotoOpen(true)} />
           </div>
         </div>
-
-        <div className="mt-16 grid grid-cols-2 gap-8 border-t border-mist/15 pt-10 sm:grid-cols-4">
-          {STATS.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <p className="font-display text-3xl font-bold text-ink">{stat.value}</p>
-              <p className="mt-1 text-xs text-mist">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
       </Container>
+      <AboutModal open={isPhotoOpen} onClose={() => setIsPhotoOpen(false)} />
     </section>
   );
 }
