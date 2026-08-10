@@ -31,15 +31,19 @@ export function Hero() {
             variants={item}
             className="font-display text-4xl font-bold leading-[1.1] text-ink md:text-6xl"
           >
-            Desenvolvedor Web & Designer
+            Desenvolvedor Web & Designer UI/UX
           </motion.h1>
           <motion.p variants={item} className="mt-6 max-w-md text-base leading-relaxed text-mist">
             Transformo ideias em experiências reais, criando interfaces web que unem design e
             funcionalidade de forma intuitiva.
           </motion.p>
           <motion.div variants={item} className="mt-8 flex gap-3">
-            <Button>Ver projetos</Button>
-            <Button variant="secondary">Entrar em contato</Button>
+            <Button asChild>
+              <a href="#projetos">Ver projetos</a>
+            </Button>
+            <Button variant="secondary" asChild>
+              <a href="#contato">Entrar em contato</a>
+            </Button>
           </motion.div>
         </motion.div>
 

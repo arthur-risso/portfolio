@@ -3,6 +3,8 @@ import { ThemeProvider } from '@/providers/ThemeProvider';
 import { Header } from '@/components/layout/Header';
 import { Hero } from '@/components/sections/Hero';
 import { Projects } from '@/components/sections/Projects';
+import { TechMarquee } from '@/components/sections/TechMarquee';
+import { About } from '@/components/sections/About';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <About />
+          <TechMarquee />
           <Projects />
         </main>
       </MotionConfig>
