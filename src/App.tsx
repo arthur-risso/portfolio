@@ -5,6 +5,8 @@ import { Hero } from '@/components/sections/Hero';
 import { Projects } from '@/components/sections/Projects';
 import { TechMarquee } from '@/components/sections/TechMarquee';
 import { About } from '@/components/sections/About';
+import { Contact } from '@/components/sections/Contact';
+import { Footer } from '@/components/layout/Footer';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
           <About />
           <TechMarquee />
           <Projects />
+          <Contact />
         </main>
+        <Footer />
       </MotionConfig>
     </ThemeProvider>
   );

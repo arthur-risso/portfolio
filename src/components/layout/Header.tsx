@@ -16,6 +16,7 @@ export function Header() {
       initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      id="topo"
       className="sticky top-0 z-50 border-b border-mist/15 bg-paper/80 backdrop-blur-md"
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
