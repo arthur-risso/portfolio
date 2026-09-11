@@ -15,7 +15,17 @@ export function ContactForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append('access_key', 'e715c2ca-c951-4df2-bbb2-fcb44f9e3261');
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      console.error(
+        'VITE_WEB3FORMS_ACCESS_KEY não está definida. Configure o arquivo .env (veja .env.example).',
+      );
+      setStatus('error');
+      return;
+    }
+
+    formData.append('access_key', accessKey);
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {

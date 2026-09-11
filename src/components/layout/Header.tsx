@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
   { label: 'Sobre', href: '#sobre' },
@@ -8,8 +8,35 @@ const NAV_LINKS = [
   { label: 'Contato', href: '#contato' },
 ];
 
+const SECTION_IDS = NAV_LINKS.map((link) => link.href.slice(1));
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(
+      (el): el is HTMLElement => el !== null,
+    );
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.header
@@ -25,20 +52,26 @@ export function Header() {
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-mist transition-colors hover:text-ink"
-            >
-              {link.label}
-            </a>
-          ))}
-          <Button size="sm">Currículo</Button>
+          {NAV_LINKS.map((link) => {
+            const isActive = activeSection === link.href.slice(1);
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? 'true' : undefined}
+                className={cn(
+                  'rounded text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2',
+                  isActive ? 'font-medium text-ink' : 'text-mist hover:text-ink',
+                )}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
 
         <button
-          className="flex h-9 w-9 items-center justify-center md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isOpen}
@@ -83,7 +116,7 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="py-2 text-sm text-mist"
+                  className="rounded py-2 text-sm text-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

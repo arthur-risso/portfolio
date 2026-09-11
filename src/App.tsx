@@ -12,8 +12,14 @@ function App() {
   return (
     <ThemeProvider>
       <MotionConfig reducedMotion="user">
+        <a
+          href="#conteudo"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[60] focus-visible:rounded-md focus-visible:bg-signal focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2"
+        >
+          Pular para o conteúdo
+        </a>
         <Header />
-        <main>
+        <main id="conteudo">
           <Hero />
           <About />
           <TechMarquee />

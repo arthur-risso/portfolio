@@ -1,0 +1,17 @@
+{
+  "name": "Arthur Risso | Portfolio",
+  "short_name": "Arthur Risso",
+  "description": "Portfólio de Arthur Risso, desenvolvedor web e designer UI/UX.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}

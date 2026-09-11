@@ -11,7 +11,7 @@
   --color-paper: #fafaf9;
   --color-surface: #ffffff;
   --color-ink: #14141a;
-  --color-mist: #6e6e76;
+  --color-mist: #5f5f68;
   --color-signal: #1e3a5f;
   --color-signal-soft: #e8edf3;
   --color-danger: #b3261e;
@@ -34,9 +34,19 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+}
+
+/* Smooths the light/dark toggle across every element, not just body.
+   Low specificity on purpose: any Tailwind transition-* utility on a
+   given element still wins over this baseline. */
+@media (prefers-reduced-motion: no-preference) {
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
 }
 
 @keyframes marquee {
