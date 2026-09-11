@@ -82,3 +82,65 @@ body {
 html {
   scroll-padding-top: 4rem;
 }
+
+.bg-grid {
+  background-image:
+    repeating-linear-gradient(to right, var(--color-mist) 0 1px, transparent 1px 56px),
+    repeating-linear-gradient(to bottom, var(--color-mist) 0 1px, transparent 1px 56px);
+  opacity: 0.05;
+}
+
+.dark .bg-grid {
+  opacity: 0.08;
+}
+
+.bg-glow {
+  filter: blur(64px);
+}
+
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(3%, 4%) scale(1.08);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-4%, 3%) scale(1.05);
+  }
+}
+
+@keyframes drift-c {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(2%, -3%) scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-drift-a {
+    animation: drift-a 26s ease-in-out infinite;
+  }
+
+  .animate-drift-b {
+    animation: drift-b 32s ease-in-out infinite;
+  }
+
+  .animate-drift-c {
+    animation: drift-c 22s ease-in-out infinite;
+  }
+}
