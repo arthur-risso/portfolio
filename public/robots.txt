@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arthurrisso.dev/sitemap.xml
+Sitemap: https://portfolio-arthurrisso.vercel.app/sitemap.xml

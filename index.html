@@ -13,7 +13,7 @@
       name="description"
       content="Portfólio de Arthur Risso, desenvolvedor web e designer UI/UX. Confira projetos, stack e formas de entrar em contato para trabalhar juntos."
     />
-    <link rel="canonical" href="https://arthurrisso.dev/" />
+    <link rel="canonical" href="https://portfolio-arthurrisso.vercel.app/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -23,8 +23,8 @@
       property="og:description"
       content="Portfólio de Arthur Risso, desenvolvedor web e designer UI/UX. Confira projetos, stack e formas de entrar em contato para trabalhar juntos."
     />
-    <meta property="og:url" content="https://arthurrisso.dev/" />
-    <meta property="og:image" content="https://arthurrisso.dev/pfp-portfolio.jpeg" />
+    <meta property="og:url" content="https://portfolio-arthurrisso.vercel.app/" />
+    <meta property="og:image" content="https://portfolio-arthurrisso.vercel.app/pfp-portfolio.jpeg" />
     <meta property="og:locale" content="pt_BR" />
 
     <!-- Twitter Card -->
@@ -34,7 +34,7 @@
       name="twitter:description"
       content="Portfólio de Arthur Risso, desenvolvedor web e designer UI/UX. Confira projetos, stack e formas de entrar em contato para trabalhar juntos."
     />
-    <meta name="twitter:image" content="https://arthurrisso.dev/pfp-portfolio.jpeg" />
+    <meta name="twitter:image" content="https://portfolio-arthurrisso.vercel.app/pfp-portfolio.jpeg" />
 
     <script type="application/ld+json">
       {
@@ -42,8 +42,8 @@
         "@type": "Person",
         "name": "Arthur Risso",
         "jobTitle": "Desenvolvedor Web & Designer UI/UX",
-        "url": "https://arthurrisso.dev/",
-        "image": "https://arthurrisso.dev/pfp-portfolio.jpeg",
+        "url": "https://portfolio-arthurrisso.vercel.app/",
+        "image": "https://portfolio-arthurrisso.vercel.app/pfp-portfolio.jpeg",
         "sameAs": [
           "https://github.com/arthur-risso",
           "https://linkedin.com/in/arthur-risso"
@@ -51,14 +51,7 @@
       }
     </script>
 
-    <script>
-      (function () {
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var isDark = stored ? stored === 'dark' : prefersDark;
-        document.documentElement.classList.toggle('dark', isDark);
-      })();
-    </script>
+    <script src="/theme-init.js"></script>
   </head>
   <body>
     <div id="root"></div>

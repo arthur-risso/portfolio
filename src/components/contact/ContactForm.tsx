@@ -47,18 +47,41 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-4">
+      <input
+        type="checkbox"
+        name="botcheck"
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
+
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-xs font-medium text-mist">
             Nome
           </label>
-          <Input id="name" name="name" type="text" required placeholder="Seu nome" />
+          <Input
+            id="name"
+            name="name"
+            type="text"
+            required
+            maxLength={100}
+            placeholder="Seu nome"
+          />
         </div>
         <div>
           <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-mist">
             E-mail
           </label>
-          <Input id="email" name="email" type="email" required placeholder="seu@email.com" />
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            required
+            maxLength={254}
+            placeholder="seu@email.com"
+          />
         </div>
       </div>
 
@@ -66,7 +89,14 @@ export function ContactForm() {
         <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-mist">
           Mensagem
         </label>
-        <Textarea id="message" name="message" required rows={4} placeholder="Como posso ajudar?" />
+        <Textarea
+          id="message"
+          name="message"
+          required
+          maxLength={5000}
+          rows={4}
+          placeholder="Como posso ajudar?"
+        />
       </div>
 
       <div className="flex items-center gap-4">
