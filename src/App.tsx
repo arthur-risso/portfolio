@@ -4,7 +4,7 @@ import { BackgroundFX } from '@/components/layout/BackgroundFX';
 import { Header } from '@/components/layout/Header';
 import { Hero } from '@/components/sections/Hero';
 import { Projects } from '@/components/sections/Projects';
-import { TechMarquee } from '@/components/sections/TechMarquee';
+import { Process } from '@/components/sections/Process';
 import { About } from '@/components/sections/About';
 import { Contact } from '@/components/sections/Contact';
 import { Footer } from '@/components/layout/Footer';
@@ -24,8 +24,8 @@ function App() {
         <main id="conteudo">
           <Hero />
           <About />
-          <TechMarquee />
           <Projects />
+          <Process />
           <Contact />
         </main>
         <Footer />

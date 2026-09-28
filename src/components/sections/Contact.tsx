@@ -1,9 +1,10 @@
 import { motion, type Variants } from 'motion/react';
-import { SiGithub } from 'react-icons/si';
-import { FaLinkedinIn } from 'react-icons/fa6';
+import { FaWhatsapp } from 'react-icons/fa6';
 import { Container } from '@/components/layout/Container';
+import { Button } from '@/components/ui/Button';
 import { CopyEmail } from '@/components/contact/CopyEmail';
 import { ContactForm } from '@/components/contact/ContactForm';
+import { whatsappUrl } from '@/data/contact';
 
 const container: Variants = {
   hidden: {},
@@ -15,70 +16,61 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const SOCIALS = [
-  { name: 'GitHub', href: 'https://github.com/arthur-risso', icon: SiGithub },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/arthur-risso', icon: FaLinkedinIn },
-];
-
 export function Contact() {
   return (
     <section id="contato" className="py-24">
       <Container>
-        <div className="grid gap-12 md:grid-cols-2 md:items-start">
+        <p className="font-mono text-xs uppercase tracking-wider text-signal">Contato</p>
+        <h2 className="mt-3 font-display text-3xl font-bold text-ink md:text-4xl">
+          Vamos conversar.
+        </h2>
+        <p className="mt-4 max-w-md text-base leading-relaxed text-mist text-pretty">
+          Me conta sobre o seu negócio e o que você precisa: um site institucional, uma landing page
+          ou a interface de um sistema. Eu respondo com os próximos passos e, se fizer sentido,
+          marcamos uma conversa.
+        </p>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="min-w-0 rounded-xl border border-mist/15 bg-surface p-6 sm:p-8"
+          >
+            <h3 className="font-display text-xl font-bold text-ink">Me conta seu projeto</h3>
+            <p className="mt-1 font-mono text-xs text-mist">// direto pra minha caixa de entrada</p>
+
+            <div className="mt-6">
+              <ContactForm />
+            </div>
+          </motion.div>
+
           <motion.div
             variants={container}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-100px' }}
-            className="order-1 md:order-2"
+            className="min-w-0 md:pt-2"
           >
-            <motion.p
-              variants={item}
-              className="mb-4 font-mono text-xs uppercase tracking-wider text-signal"
-            >
-              Contato
-            </motion.p>
-            <motion.h2
-              variants={item}
-              className="font-display text-3xl font-bold text-ink md:text-4xl"
-            >
-              Vamos conversar.
-            </motion.h2>
-            <motion.p variants={item} className="mt-4 text-base leading-relaxed text-mist">
-              Tem um projeto em mente ou só quer trocar uma ideia? Me manda uma mensagem.
+            <motion.p variants={item} className="font-mono text-xs text-mist">
+              // ou, se preferir, direto por aqui
             </motion.p>
 
-            <motion.div variants={item} className="mt-8">
-              <CopyEmail />
+            <motion.div variants={item} className="mt-4">
+              <CopyEmail compact />
             </motion.div>
 
-            <motion.div variants={item} className="mt-6 flex gap-4">
-              {SOCIALS.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={social.name}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-mist/20 text-mist transition-colors hover:border-signal hover:text-signal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal"
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="order-2 rounded-xl border border-mist/15 bg-surface p-6 sm:p-8 md:order-1"
-          >
-            <p className="mb-6 font-mono text-xs uppercase tracking-wider text-mist">
-              Ou, se preferir, preenche o formulário
-            </p>
-            <ContactForm />
+            {whatsappUrl && (
+              <motion.div variants={item} className="mt-4">
+                <Button variant="secondary" size="lg" asChild>
+                  <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                    <FaWhatsapp className="mr-2" size={18} aria-hidden="true" />
+                    Chamar no WhatsApp
+                  </a>
+                </Button>
+              </motion.div>
+            )}
           </motion.div>
         </div>
       </Container>

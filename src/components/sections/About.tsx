@@ -1,8 +1,27 @@
 import { useState } from 'react';
+import { motion, type Variants } from 'motion/react';
+import {
+  SiCss,
+  SiFigma,
+  SiHtml5,
+  SiJavascript,
+  SiNodedotjs,
+  SiPostgresql,
+  SiReact,
+} from 'react-icons/si';
 import { Container } from '@/components/layout/Container';
 import { AboutPhoto } from '@/components/about/AboutPhoto';
-import { motion, type Variants } from 'motion/react';
 import { AboutModal } from '@/components/about/AboutModal';
+
+const TOOLS = [
+  { name: 'Figma', icon: SiFigma },
+  { name: 'HTML', icon: SiHtml5 },
+  { name: 'CSS', icon: SiCss },
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'React', icon: SiReact },
+  { name: 'Node.js', icon: SiNodedotjs },
+  { name: 'PostgreSQL', icon: SiPostgresql },
+];
 
 const container: Variants = {
   hidden: {},
@@ -29,29 +48,46 @@ export function About() {
           >
             <motion.p
               variants={item}
-              className="mb-4   nt-mono text-xs uppercase tracking-wider text-signal"
+              className="mb-4 font-mono text-xs uppercase tracking-wider text-signal"
             >
               Sobre
             </motion.p>
+            <h2 className="font-display text-2xl font-bold leading-snug text-ink text-balance sm:text-3xl md:text-4xl">
+              <motion.span variants={item} className="block">
+                Eu não decoro interfaces.
+              </motion.span>
+              <motion.span variants={item} className="block">
+                Eu construo experiências que{' '}
+                <span className="text-signal">funcionam de verdade.</span>
+              </motion.span>
+              <motion.span variants={item} className="block">
+                Performance e acessibilidade não são extras.
+              </motion.span>
+            </h2>
+
             <motion.p
               variants={item}
-              className="font-display text-2xl font-bold leading-snug text-ink sm:text-3xl md:text-4xl"
+              className="mt-6 max-w-md text-sm leading-relaxed text-mist text-pretty"
             >
-              Eu não decoro interfaces.
+              Na prática: uma pessoa só do briefing à entrega. A página que você aprova no protótipo
+              é a mesma que vai ao ar, sem nada se perder no caminho entre quem desenha e quem
+              programa.
             </motion.p>
-            <motion.p
-              variants={item}
-              className="font-display text-2xl font-bold leading-snug text-ink sm:text-3xl md:text-4xl"
-            >
-              Eu construo experiências que{' '}
-              <span className="text-signal">funcionam de verdade.</span>
-            </motion.p>
-            <motion.p
-              variants={item}
-              className="font-display text-2xl font-bold leading-snug text-ink sm:text-3xl md:text-4xl"
-            >
-              Performance e acessibilidade não são extras.
-            </motion.p>
+
+            <motion.div variants={item} className="mt-8">
+              <p className="text-xs font-medium text-mist">Ferramentas do dia a dia</p>
+              <ul
+                className="mt-3 flex flex-wrap gap-x-5 gap-y-2"
+                aria-label="Ferramentas do dia a dia"
+              >
+                {TOOLS.map((tool) => (
+                  <li key={tool.name} className="flex items-center gap-1.5 text-mist">
+                    <tool.icon size={14} aria-hidden="true" />
+                    <span className="font-mono text-xs">{tool.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
 
           <div className="md:mt-10 md:justify-self-end">

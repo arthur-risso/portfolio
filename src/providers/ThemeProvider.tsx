@@ -17,6 +17,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
+
+    // Kept in sync with the .dark class: no CSS media query drives this tag, so it must
+    // follow the in-page toggle rather than only the OS preference (see theme-init.js).
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', theme === 'dark' ? '#5b8dc4' : '#1e3a5f');
+
     try {
       localStorage.setItem('theme', theme);
     } catch {
@@ -24,7 +31,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
   }, [theme]);
 
-  const toggleTheme = () => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    root.classList.add('theme-changing');
+    window.setTimeout(() => root.classList.remove('theme-changing'), 350);
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 }

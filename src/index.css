@@ -30,46 +30,46 @@
   --color-signal-soft: #16233a;
 }
 
+@layer base {
+  /* Focus-ring offsets sit on the page, not on a hard-coded white halo. */
+  *,
+  ::before,
+  ::after {
+    --tw-ring-offset-color: var(--color-paper);
+  }
+
+  html {
+    scrollbar-color: color-mix(in srgb, var(--color-mist) 40%, transparent) transparent;
+  }
+
+  ::selection {
+    background-color: var(--color-signal);
+    color: var(--color-paper);
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-signal);
+  }
+}
+
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
 }
 
-/* Smooths the light/dark toggle across every element, not just body.
-   Low specificity on purpose: any Tailwind transition-* utility on a
-   given element still wins over this baseline. */
+/* Cross-fades the light/dark swap. Scoped to the moment of toggling
+   (ThemeProvider adds .theme-changing for ~350ms) so ordinary hovers
+   keep their own, faster transitions. */
 @media (prefers-reduced-motion: no-preference) {
-  *,
-  *::before,
-  *::after {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none;
+  .theme-changing,
+  .theme-changing *,
+  .theme-changing *::before,
+  .theme-changing *::after {
+    transition-property: background-color, border-color, color, fill, stroke !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease !important;
   }
 }
 
