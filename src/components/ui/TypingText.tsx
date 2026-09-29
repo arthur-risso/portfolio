@@ -48,17 +48,18 @@ export function TypingText({ text, className }: TypingTextProps) {
           <style>{`
             .${cls} {
               width: ${width}px;
-              animation: type-${id} 4s infinite, blink-${id} 0.75s step-end infinite;
+              border-right-color: transparent;
+              animation:
+                type-${id} 1.2s steps(${text.length}, end) 0.4s both,
+                blink-${id} 0.75s step-end 0s 4;
             }
             @keyframes type-${id} {
-              0% { width: 0; animation-timing-function: steps(${text.length}, end); }
-              30% { width: ${width}px; }
-              55% { width: ${width}px; animation-timing-function: steps(${text.length}, end); }
-              85% { width: 0; }
-              100% { width: 0; }
+              from { width: 0; }
+              to { width: ${width}px; }
             }
             @keyframes blink-${id} {
-              50% { border-color: transparent; }
+              0%, 49% { border-right-color: var(--color-signal); }
+              50%, 100% { border-right-color: transparent; }
             }
             @media (prefers-reduced-motion: reduce) {
               .${cls} {

@@ -1,6 +1,9 @@
 import { Expand } from 'lucide-react';
 import { motion } from 'motion/react';
 
+// The expand cue lives once, in the always-visible caption below — no need to repeat
+// it as a hover-only overlay on the photo itself.
+
 interface AboutPhotoProps {
   onOpen: () => void;
 }
@@ -25,13 +28,11 @@ export function AboutPhoto({ onOpen }: AboutPhotoProps) {
           loading="lazy"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-ink/0 opacity-0 transition-all duration-200 group-hover:bg-ink/30 group-hover:opacity-100">
-          <Expand className="text-paper" size={22} strokeWidth={1.75} />
-        </div>
+        <div className="absolute inset-0 bg-ink/0 transition-colors duration-200 group-hover:bg-ink/15" />
       </div>
-      <p className="border-t border-mist/15 bg-surface px-3 py-2 font-mono text-[11px] text-mist transition-colors group-hover:text-signal">
-        <span className="group-hover:hidden">// arthur.dev</span>
-        <span className="hidden group-hover:inline">// clique para expandir</span>
+      <p className="flex items-center justify-between gap-2 border-t border-mist/15 bg-surface px-3 py-2 font-mono text-xs text-mist transition-colors duration-150 group-hover:text-signal">
+        <span>// mais sobre mim</span>
+        <Expand size={12} strokeWidth={2} aria-hidden="true" />
       </p>
     </motion.button>
   );

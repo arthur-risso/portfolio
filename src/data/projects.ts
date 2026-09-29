@@ -9,8 +9,14 @@ export interface Project {
   screenshot: string;
   /** true só se o site permitir iframe (sem X-Frame-Options DENY / frame-ancestors 'none'). */
   embeddable?: boolean;
+  /** Estudo de caso opcional. Só resultados reais e verificáveis. */
+  problem?: string;
+  solution?: string;
+  result?: string;
 }
 
+// 1 a 3 projetos bem contados valem mais que vários genéricos.
+// Com a lista vazia, a seção Projetos mostra o aviso de "estudos de caso em produção".
 export const projects: Project[] = [
   {
     id: 'tsumiru',

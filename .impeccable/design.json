@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T20:54:32.579Z",
+  "title": "Design System: Arthur Risso Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "blueprint-navy": {
+        "role": "primary",
+        "displayName": "Blueprint Navy",
+        "canonical": "#1e3a5f",
+        "cssVar": "--color-signal",
+        "tonalRamp": [
+          "#0b1624",
+          "#132740",
+          "#1e3a5f",
+          "#2f5484",
+          "#4a73a6",
+          "#7598c3",
+          "#a8c0dc",
+          "#dde7f2"
+        ]
+      },
+      "blueprint-navy-dark": {
+        "role": "primary",
+        "displayName": "Blueprint Navy (dark theme)",
+        "canonical": "#5b8dc4",
+        "cssVar": "--color-signal",
+        "tonalRamp": [
+          "#14263b",
+          "#1f3a5a",
+          "#2e5582",
+          "#4270a5",
+          "#5b8dc4",
+          "#81a9d4",
+          "#adc8e4",
+          "#dce8f4"
+        ]
+      },
+      "navy-wash": {
+        "role": "primary",
+        "displayName": "Navy Wash",
+        "canonical": "#e8edf3",
+        "cssVar": "--color-signal-soft",
+        "tonalRamp": [
+          "#3a4553",
+          "#56616f",
+          "#76818e",
+          "#9aa4af",
+          "#bcc4cd",
+          "#d4dae1",
+          "#e8edf3",
+          "#f5f7fa"
+        ]
+      },
+      "navy-wash-dark": {
+        "role": "primary",
+        "displayName": "Navy Wash (dark theme)",
+        "canonical": "#16233a",
+        "cssVar": "--color-signal-soft",
+        "tonalRamp": [
+          "#070b13",
+          "#0e1726",
+          "#16233a",
+          "#223452",
+          "#34496c",
+          "#4d6388",
+          "#7087a8",
+          "#a1b2c9"
+        ]
+      },
+      "drafting-paper": {
+        "role": "neutral",
+        "displayName": "Drafting Paper",
+        "canonical": "#fafaf9",
+        "cssVar": "--color-paper",
+        "tonalRamp": [
+          "#262624",
+          "#44443f",
+          "#65655f",
+          "#8a8a83",
+          "#b0b0aa",
+          "#d4d4cf",
+          "#ecece9",
+          "#fafaf9"
+        ]
+      },
+      "drafting-paper-dark": {
+        "role": "neutral",
+        "displayName": "Drafting Paper (dark theme)",
+        "canonical": "#0d0d11",
+        "cssVar": "--color-paper",
+        "tonalRamp": [
+          "#0d0d11",
+          "#1a1a20",
+          "#2a2a32",
+          "#3e3e48",
+          "#575762",
+          "#75757f",
+          "#9a9aa2",
+          "#c4c4ca"
+        ]
+      },
+      "sheet-white": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "#ffffff",
+        "cssVar": "--color-surface",
+        "tonalRamp": [
+          "#262626",
+          "#474747",
+          "#6b6b6b",
+          "#919191",
+          "#b8b8b8",
+          "#dbdbdb",
+          "#f2f2f2",
+          "#ffffff"
+        ]
+      },
+      "sheet-white-dark": {
+        "role": "neutral",
+        "displayName": "Sheet White (dark theme)",
+        "canonical": "#17171c",
+        "cssVar": "--color-surface",
+        "tonalRamp": [
+          "#0b0b0e",
+          "#17171c",
+          "#25252c",
+          "#383840",
+          "#505059",
+          "#6d6d77",
+          "#92929b",
+          "#bdbdc4"
+        ]
+      },
+      "graphite-ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "#14141a",
+        "cssVar": "--color-ink",
+        "tonalRamp": [
+          "#14141a",
+          "#25252e",
+          "#3a3a45",
+          "#53535f",
+          "#70707c",
+          "#93939d",
+          "#babac1",
+          "#e2e2e6"
+        ]
+      },
+      "graphite-ink-dark": {
+        "role": "neutral",
+        "displayName": "Graphite Ink (dark theme)",
+        "canonical": "#f2f2f4",
+        "cssVar": "--color-ink",
+        "tonalRamp": [
+          "#2a2a30",
+          "#44444c",
+          "#62626b",
+          "#83838c",
+          "#a6a6ae",
+          "#c9c9cf",
+          "#e3e3e7",
+          "#f2f2f4"
+        ]
+      },
+      "pencil-grey": {
+        "role": "neutral",
+        "displayName": "Pencil Grey",
+        "canonical": "#5f5f68",
+        "cssVar": "--color-mist",
+        "tonalRamp": [
+          "#1f1f23",
+          "#34343a",
+          "#4a4a52",
+          "#5f5f68",
+          "#7e7e87",
+          "#a1a1a8",
+          "#c6c6cb",
+          "#e9e9ec"
+        ]
+      },
+      "pencil-grey-dark": {
+        "role": "neutral",
+        "displayName": "Pencil Grey (dark theme)",
+        "canonical": "#9a9aa2",
+        "cssVar": "--color-mist",
+        "tonalRamp": [
+          "#26262a",
+          "#3d3d43",
+          "#56565e",
+          "#72727a",
+          "#9a9aa2",
+          "#b3b3b9",
+          "#cfcfd3",
+          "#ebebed"
+        ]
+      },
+      "correction-red": {
+        "role": "tertiary",
+        "displayName": "Correction Red",
+        "canonical": "#b3261e",
+        "cssVar": "--color-danger",
+        "tonalRamp": [
+          "#3b0c09",
+          "#651510",
+          "#8f1e17",
+          "#b3261e",
+          "#d2493f",
+          "#e47a72",
+          "#f0aca7",
+          "#fadcd9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, About statement lines, and the oversized copy-email line."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project card and modal titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Intro and supporting paragraphs; hero intro capped near 28rem."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Card descriptions, nav links, form text, modal copy."
+      },
+      "label": {
+        "displayName": "Label / Annotation",
+        "purpose": "Uppercase navy section eyebrows, pencil-grey captions and indices, navy #tags, and // margin notes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog-float",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "purpose": "Modals only, over a 50% graphite scrim with backdrop blur."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default ease-out for entries, modals, header, and mobile menu."
+      },
+      {
+        "name": "entry-rise",
+        "value": "opacity 0→1, translateY 16px→0, 0.5s, stagger 0.12s",
+        "purpose": "Section content entering on scroll, once per view."
+      },
+      {
+        "name": "modal-in",
+        "value": "opacity + scale 0.96→1 + translateY 8px→0, 0.2s",
+        "purpose": "Dialog open/close."
+      },
+      {
+        "name": "theme-crossfade",
+        "value": "background-color, border-color, color, fill, stroke 0.3s ease",
+        "purpose": "Light/dark swap only (html.theme-changing for ~350ms); reduced-motion gated."
+      },
+      {
+        "name": "switch-spring",
+        "value": "spring stiffness 500, damping 30",
+        "purpose": "Theme switch thumb."
+      },
+      {
+        "name": "press",
+        "value": "scale 0.97, 200ms",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "drift",
+        "value": "22s / 26s / 32s ease-in-out infinite",
+        "purpose": "Background glow drift; the only ambient loop; reduced-motion gated."
+      },
+      {
+        "name": "blueprint-wipe",
+        "value": "clip-path inset(0 100% 0 0) → inset(0), 0.9s cubic-bezier(0.65, 0, 0.35, 1), 1px navy pen on the edge",
+        "purpose": "Hero demo: sketch inked into the finished page, once when the panel enters view (not on a fixed timer, so it isn't missed below the fold); instant under reduced motion."
+      },
+      {
+        "name": "dimension-line",
+        "value": "scaleX/scaleY 0→1, 1.1s ease-settle; nodes fill with 0.18s stagger",
+        "purpose": "Process line drawing itself on first view."
+      },
+      {
+        "name": "type-once",
+        "value": "steps(n) 1.2s after 0.4s, caret blinks 4× then hides",
+        "purpose": "Hero availability line; types once and holds."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call to action (\"Ver projetos\", form submit).",
+      "html": "<button class=\"ds-btn-primary\">Ver projetos</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 16px; border: none; border-radius: 6px; background: var(--color-signal, #1e3a5f); color: var(--color-paper, #fafaf9); font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 0.875rem; cursor: pointer; transition: all 200ms; } .ds-btn-primary:hover { background: color-mix(in srgb, var(--color-signal, #1e3a5f) 90%, transparent); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--color-paper, #fafaf9), 0 0 0 4px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Alternate action beside a primary (\"Entrar em contato\").",
+      "html": "<button class=\"ds-btn-secondary\">Entrar em contato</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 16px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 40%, transparent); border-radius: 6px; background: var(--color-surface, #ffffff); color: var(--color-ink, #14141a); font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 0.875rem; cursor: pointer; transition: all 200ms; } .ds-btn-secondary:hover { background: var(--color-signal-soft, #e8edf3); border-color: color-mix(in srgb, var(--color-signal, #1e3a5f) 50%, transparent); } .ds-btn-secondary:active { transform: scale(0.97); } .ds-btn-secondary:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--color-paper, #fafaf9), 0 0 0 4px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Contact form field on a Sheet White panel.",
+      "html": "<input class=\"ds-input\" placeholder=\"Seu nome\" />",
+      "css": ".ds-input { height: 44px; width: 100%; padding: 0 14px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 40%, transparent); border-radius: 6px; background: var(--color-paper, #fafaf9); color: var(--color-ink, #14141a); font-family: 'IBM Plex Sans', sans-serif; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s; } .ds-input:hover { border-color: color-mix(in srgb, var(--color-mist, #5f5f68) 60%, transparent); } .ds-input::placeholder { color: color-mix(in srgb, var(--color-mist, #5f5f68) 80%, transparent); } @media (min-width: 640px) { .ds-input { font-size: 0.875rem; } } .ds-input:focus-visible { outline: none; border-color: var(--color-signal, #1e3a5f); box-shadow: 0 0 0 2px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Sticky blurred header with wordmark and section links; active section in graphite.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">Arthur<span>.dev</span></a><nav class=\"ds-nav-links\"><a href=\"#sobre\" aria-current=\"true\">Sobre</a><a href=\"#projetos\">Projetos</a><a href=\"#processo\">Como trabalho</a><a href=\"#contato\">Contato</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; background: color-mix(in srgb, var(--color-paper, #fafaf9) 80%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 15%, transparent); } .ds-nav-mark { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.125rem; color: var(--color-ink, #14141a); text-decoration: none; } .ds-nav-mark span { color: var(--color-signal, #1e3a5f); } .ds-nav-links { display: flex; gap: 32px; } .ds-nav-links a { font-family: 'IBM Plex Sans', sans-serif; font-size: 0.875rem; color: var(--color-mist, #5f5f68); text-decoration: none; border-radius: 4px; transition: color 0.2s; } .ds-nav-links a:hover { color: var(--color-ink, #14141a); } .ds-nav-links a[aria-current] { color: var(--color-ink, #14141a); font-weight: 500; } .ds-nav-links a:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat Sheet White card: navy mono kind, title, the problem in one sentence, and a case-study link.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-kind\">Landing page</span><h3 class=\"ds-card-title\">Padaria Aurora</h3><p class=\"ds-card-desc\">As encomendas chegavam só por telefone e se perdiam em horário de pico.</p><button class=\"ds-card-link\">Ver estudo de caso <span aria-hidden=\"true\">→</span></button></article>",
+      "css": ".ds-card { max-width: 340px; padding: 24px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 15%, transparent); border-radius: 12px; background: var(--color-surface, #ffffff); transition: border-color 0.3s; } .ds-card:hover { border-color: color-mix(in srgb, var(--color-signal, #1e3a5f) 40%, transparent); } .ds-card-kind { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--color-signal, #1e3a5f); } .ds-card-title { margin: 12px 0 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--color-ink, #14141a); } .ds-card-desc { margin: 8px 0 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.875rem; line-height: 1.625; color: var(--color-mist, #5f5f68); } .ds-card-link { margin-top: 20px; padding: 0; border: none; background: none; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.875rem; font-weight: 500; color: var(--color-ink, #14141a); cursor: pointer; border-radius: 4px; transition: color 0.2s; } .ds-card-link span { display: inline-block; transition: transform 0.2s; } .ds-card:hover .ds-card-link { color: var(--color-signal, #1e3a5f); } .ds-card:hover .ds-card-link span { transform: translateX(2px); } .ds-card-link:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "tag-chip",
+      "description": "Navy Wash pill for tags inside the project modal.",
+      "html": "<span class=\"ds-chip\">react</span>",
+      "css": ".ds-chip { display: inline-block; padding: 4px 10px; border-radius: 9999px; background: var(--color-signal-soft, #e8edf3); color: var(--color-signal, #1e3a5f); font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; font-weight: 500; }"
+    },
+    {
+      "name": "Round Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button-round",
+      "description": "Circular outlined control for socials, carousel arrows, and the copy-email badge.",
+      "html": "<a class=\"ds-icon-btn\" href=\"#\" aria-label=\"GitHub\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3\"/></svg></a>",
+      "css": ".ds-icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 20%, transparent); border-radius: 9999px; color: var(--color-mist, #5f5f68); transition: color 0.2s, border-color 0.2s; } .ds-icon-btn:hover { border-color: var(--color-signal, #1e3a5f); color: var(--color-signal, #1e3a5f); } .ds-icon-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Blueprint Stage Switch",
+      "kind": "custom",
+      "description": "Hero demo header: margin note plus the Esboço / Pronto pill switch.",
+      "html": "<div class=\"ds-stage\"><p class=\"ds-stage-note\">// exemplo: do esboço ao site no ar</p><div class=\"ds-stage-group\" role=\"group\" aria-label=\"Etapa do exemplo\"><button aria-pressed=\"false\">Esboço</button><button aria-pressed=\"true\">Pronto</button></div></div>",
+      "css": ".ds-stage { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; max-width: 460px; padding: 12px 20px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 15%, transparent); border-radius: 12px; background: var(--color-surface, #ffffff); } .ds-stage-note { margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--color-mist, #5f5f68); } .ds-stage-group { display: flex; padding: 2px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 20%, transparent); border-radius: 9999px; } .ds-stage-group button { height: 32px; padding: 0 14px; border: none; border-radius: 9999px; background: transparent; color: var(--color-mist, #5f5f68); font-family: 'IBM Plex Sans', sans-serif; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: color 150ms, background-color 150ms; } .ds-stage-group button:hover { color: var(--color-ink, #14141a); } .ds-stage-group button[aria-pressed=\"true\"] { background: var(--color-signal, #1e3a5f); color: var(--color-paper, #fafaf9); } .ds-stage-group button:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--color-surface, #ffffff), 0 0 0 4px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "description": "Form \"Tipo de projeto\" radio chip.",
+      "html": "<label class=\"ds-choice\"><input type=\"radio\" name=\"t\" checked /> Landing page</label><label class=\"ds-choice\"><input type=\"radio\" name=\"t\" /> Site institucional</label>",
+      "css": ".ds-choice { display: inline-block; margin: 0 8px 8px 0; min-height: 44px; padding: 0 16px; display: inline-flex; align-items: center; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 40%, transparent); border-radius: 9999px; color: var(--color-mist, #5f5f68); font-family: 'IBM Plex Sans', sans-serif; font-size: 0.75rem; cursor: pointer; transition: color 150ms, border-color 150ms, background-color 150ms; } .ds-choice input { position: absolute; opacity: 0; width: 1px; height: 1px; } .ds-choice:hover { border-color: color-mix(in srgb, var(--color-signal, #1e3a5f) 60%, transparent); color: var(--color-ink, #14141a); } .ds-choice:has(:checked) { border-color: var(--color-signal, #1e3a5f); background: var(--color-signal-soft, #e8edf3); color: var(--color-signal, #1e3a5f); } .ds-choice:has(:focus-visible) { box-shadow: 0 0 0 2px var(--color-surface, #ffffff), 0 0 0 4px var(--color-signal, #1e3a5f); }"
+    },
+    {
+      "name": "Contact Form Panel",
+      "kind": "card",
+      "description": "Primary Contato panel: a plain heading (not an eyebrow) over the form.",
+      "html": "<div class=\"ds-contact-form\"><h3>Me conta seu projeto</h3><p class=\"ds-contact-note\">// direto pra minha caixa de entrada</p></div>",
+      "css": ".ds-contact-form { padding: 24px; border: 1px solid color-mix(in srgb, var(--color-mist, #5f5f68) 15%, transparent); border-radius: 12px; background: var(--color-surface, #ffffff); } .ds-contact-form h3 { margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--color-ink, #14141a); } .ds-contact-form .ds-contact-note { margin: 4px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--color-mist, #5f5f68); }"
+    },
+    {
+      "name": "Direct Contact Panel",
+      "kind": "custom",
+      "description": "Secondary Contato panel: email (compact) and WhatsApp when a number is set.",
+      "html": "<div class=\"ds-contact-direct\"><p class=\"ds-contact-note\">// ou, se preferir, direto por aqui</p><a class=\"ds-contact-email\" href=\"mailto:arthur@example.com\">arthur@example.com</a></div>",
+      "css": ".ds-contact-direct .ds-contact-note { margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--color-mist, #5f5f68); } .ds-contact-direct .ds-contact-email { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.125rem; color: var(--color-ink, #14141a); text-decoration: none; } .ds-contact-direct .ds-contact-email:hover { color: var(--color-signal, #1e3a5f); text-decoration: underline; text-underline-offset: 6px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Blueprint",
+    "overview": "The page is a technical drawing that actually runs. A calm sheet of drafting paper carries a faint 56px grid, and one navy ink draws every line that matters: the calls to action, the active state, the focus ring, the annotation. Margin notes are written as code comments in monospace (`// exemplo: do esboço ao site no ar`, `// mais sobre mim`), so the site reads like a spec whose drawings become real things in front of the visitor.\n\nDensity is low and deliberate. Sections breathe on a 96px vertical rhythm inside a 72rem column, surfaces are flat sheets outlined in hairline pencil borders, and color is withheld until something is interactive. The blueprint is engineered first and playful second: the playfulness lives in small, earned moments (the hero sketch being inked into a finished page, the tilted photo that straightens on hover, the process line drawing itself) and never in decoration for its own sake.\n\nLight and dark are two printings of the same drawing, not two designs. Every token has a paired value; the theme toggle lives in the header.",
+    "keyCharacteristics": [
+      "One accent (Blueprint Navy) on warm-neutral paper; everything else is graphite and pencil grey.",
+      "Faint grid paper and slow, blurred navy glows drifting behind the content.",
+      "Space Grotesk headlines, IBM Plex Sans body, IBM Plex Mono annotations.",
+      "Flat bordered sheets; shadow only on floating dialogs.",
+      "Motion that settles with a long ease-out, always gated by reduced-motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Ink Rule",
+        "body": "Blueprint Navy is the only hue on the page. Adding a second accent breaks the drawing; express hierarchy with graphite vs. pencil grey and weight instead.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pencil Border Rule",
+        "body": "Borders are Pencil Grey, never solid grey or black. Decorative borders (sheets, dividers) stay light (10–15%); a border that's the sole boundary of an interactive control (inputs, chips, secondary buttons) is Pencil Grey at 40%, darkening to 60% on hover, which is the deliberate exception to keeping the drawing quiet. On hover a border may also pick up navy instead (`signal/40` on cards, full navy on round icon buttons).",
+        "section": "colors"
+      },
+      {
+        "name": "The Margin Note Rule",
+        "body": "Asides that talk _about_ the interface are set in mono and prefixed with `//`. Real UI labels and content never use the comment prefix.",
+        "section": "typography"
+      },
+      {
+        "name": "The Eyebrow Rule",
+        "body": "Every section opens with an uppercase mono eyebrow in Blueprint Navy, followed by a Space Grotesk headline in Graphite Ink. A panel *inside* a section (the Contact form card) earns its own plain heading instead — the eyebrow marks a section's entrance, not every box within it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Nothing that lives in the page flow casts a shadow. Only surfaces that float above the drawing (dialogs) get one; the sticky header separates itself with an 80% paper tint, backdrop blur, and a hairline instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep Blueprint Navy the single accent, and use it for everything interactive or live (The One Ink Rule).",
+      "**Do** open every section with a navy uppercase mono eyebrow, then a Space Grotesk headline.",
+      "**Do** write interface asides as `//` mono margin notes in pencil grey.",
+      "**Do** outline decorative sheets and dividers with pencil grey at 10–15% opacity and keep them flat; give interactive-control borders 40% resting / 60% hover for real contrast.",
+      "**Do** define every new color as a light/dark pair on the existing tokens (`paper`, `surface`, `ink`, `mist`, `signal`, `signal-soft`).",
+      "**Do** animate entries with opacity + 16–20px rise on the `cubic-bezier(0.22, 1, 0.36, 1)` ease-out, 0.5s, staggered ~0.12s, once per view.",
+      "**Do** gate every looping or decorative motion behind `prefers-reduced-motion: no-preference`.",
+      "**Do** give every interactive element the 2px navy focus ring; offsets take the color of the surface underneath, never a white halo.",
+      "**Do** keep touch targets at 44px, including modal close buttons.",
+      "**Do** let every modal scroll within `100dvh - 2rem`."
+    ],
+    "donts": [
+      "**Don't** add a second accent hue or gradient fills on content surfaces; the navy glows belong to the background layer only.",
+      "**Don't** put shadows on in-flow cards, panels, or buttons (The Flat Sheet Rule).",
+      "**Don't** use pure white (#ffffff) as the page background; the page is Drafting Paper, sheets are white.",
+      "**Don't** use the `//` comment prefix on real content, headings, or button labels.",
+      "**Don't** add playful motion that isn't tied to an interaction or an entry; the background drift is the only ambient loop (the typing line types once and holds).",
+      "**Don't** give non-interactive things hover color; navy on hover means \"this does something\".",
+      "**Don't** show placeholder content on the live page; an honest interim state beats fake entries."
+    ]
+  }
+}
