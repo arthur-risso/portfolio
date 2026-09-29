@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'motion/react';
-import { SiGithub, SiLinksys } from 'react-icons/si';
+import { SiGithub, SiWhatsapp } from 'react-icons/si';
 import { Container } from '@/components/layout/Container';
 import { CopyEmail } from '@/components/contact/CopyEmail';
 import { ContactForm } from '@/components/contact/ContactForm';
@@ -16,7 +16,7 @@ const item: Variants = {
 
 const SOCIALS = [
   { name: 'GitHub', href: 'https://github.com/arthur-risso', icon: SiGithub },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/arthur-risso', icon: SiLinksys },
+  { name: 'Whatsapp', href: 'https://linkedin.com/in/arthur-risso', icon: SiWhatsapp },
 ];
 
 export function Contact() {

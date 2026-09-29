@@ -72,3 +72,8 @@ body {
 html {
   scroll-padding-top: 4rem;
 }
+
+.stage-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-mist) 45%, transparent) transparent;
+}

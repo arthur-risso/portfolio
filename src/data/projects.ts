@@ -1,47 +1,25 @@
 export interface Project {
   id: string;
-  title: string;
-  description: string;
-  fullDescription: string;
-  tags: string[];
-  liveUrl?: string;
+  name: string;
+  summary: string;
+  url: string;
   githubUrl?: string;
+  stack: string[];
+  /** Captura da página inteira em /public, usada quando o site não pode ser embutido. */
+  screenshot: string;
+  /** true só se o site permitir iframe (sem X-Frame-Options DENY / frame-ancestors 'none'). */
+  embeddable?: boolean;
 }
 
-// TROQUE os dados abaixo pelos seus projetos reais
 export const projects: Project[] = [
   {
-    id: 'projeto-1',
-    title: 'Nome do projeto',
-    description: 'Frase curta explicando o problema que esse projeto resolve.',
-    fullDescription:
-      'Descrição completa: o desafio, as decisões técnicas que você tomou, e o resultado. Esse texto aparece no modal de detalhes.',
-    tags: ['react', 'typescript', 'tailwind'],
-    liveUrl: 'https://exemplo.com',
-    githubUrl: 'https://github.com/seu-usuario/projeto-1',
-  },
-  {
-    id: 'projeto-2',
-    title: 'Nome do projeto',
-    description: 'Frase curta explicando o problema que esse projeto resolve.',
-    fullDescription: 'Descrição completa do segundo projeto.',
-    tags: ['node', 'postgresql'],
-    githubUrl: 'https://github.com/seu-usuario/projeto-2',
-  },
-  {
-    id: 'projeto-3',
-    title: 'Nome do projeto',
-    description: 'Frase curta explicando o problema que esse projeto resolve.',
-    fullDescription: 'Descrição completa do terceiro projeto.',
-    tags: ['react', 'vite'],
-    liveUrl: 'https://exemplo.com',
-  },
-  {
-    id: 'projeto-4',
-    title: 'Nome do projeto',
-    description: 'Frase curta explicando o problema que esse projeto resolve.',
-    fullDescription: 'Descrição completa do quarto projeto.',
-    tags: ['typescript', 'express'],
-    githubUrl: 'https://github.com/seu-usuario/projeto-4',
+    id: 'tsumiru',
+    name: 'Tsumiru',
+    summary:
+      'O Tsumiru (積, "sua pilha de animes") é um site para registrar os animes que você assistiu, dar notas, escrever reviews e descobrir o próximo favorito.',
+    url: 'https://tsumiru.vercel.app',
+    githubUrl: 'https://github.com/arthur-risso/tsumiru',
+    stack: ['Next.js', 'Supabase', 'AniList API'],
+    screenshot: '/projects/tsumiru.jpg',
   },
 ];
